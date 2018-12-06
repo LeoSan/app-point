@@ -1,3 +1,23 @@
-<p>
-  detalles works!
-</p>
+<br>
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/lugares">Lugares</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{nombreLugar}}</li>
+    </ol>
+  </nav>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Nombre: {{nombreLugar}} </h5>
+          <hr>
+          <p class="card-text">Distancia: {{distanciaLugar}} km</p>
+          <p class="card-text">Descripciòn: {{descLugar}}</p>
+          <p class="card-text">Plan: {{planLugar}}</p>
+          <a href="{{webLugar}}" class="btn btn-primary btn-lg btn-block">Ver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

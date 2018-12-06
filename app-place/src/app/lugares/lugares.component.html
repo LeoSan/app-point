@@ -1,3 +1,18 @@
-<p>
-  lugares works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <h3>{{ title }}</h3>
+        <!-- the component as the initial center of the map: -->
+        <agm-map [latitude]="lat" [longitude]="lng">
+         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      <hr>
+
+      <ul class="list-group">
+         <ng-container *ngFor="let lugar of lugares; let i = index">
+           <li class="list-group-item" > <a routerLink="/detalles/{{ lugar.id }}" [queryParams]='{action:"view"}' >   {{ lugar.nombre }} - </a>  </li>
+         </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>
